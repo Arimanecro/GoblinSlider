@@ -1,7 +1,5 @@
 *, *:after, *:before { box-sizing: border-box; margin:0px; padding: 0px; }
 
-//one
-
 #layers {
     width: 1100px;
     height: 800px;
