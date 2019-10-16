@@ -1,0 +1,992 @@
+*, *:after, *:before { box-sizing: border-box; margin:0px; padding: 0px; }
+/* html {
+    scroll-behavior: smooth;
+} */
+body {
+    width: 100%;
+    height: 3778px;
+}
+#layers {
+    width: 1100px;
+    height: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index:2;
+}
+#blue, #brown, #darkblue {
+    width:100%;
+    height: 560px;
+    background: #c9e7f7;
+    position: absolute;
+    z-index:1;
+}
+#brown { height: 2500px; background: #3a2213; margin-top: 560px;}
+#darkblue { height: 710px; background: #0a426a; margin-top: 3060px;}
+
+#up {
+    width: 100%;
+    height: 560px;
+    background: url("img/park.svg") repeat-x;
+    position: relative;
+    overflow: hidden;
+}
+
+#stone {
+    width: 421px;
+    height: 82px;
+    background: url("img/stone.png") no-repeat;
+    position: absolute;
+    bottom: 0px;
+    left: 63px;
+    z-index:3;
+}
+#cave {
+    width: 724px;
+    height: 538px;
+    float: right;
+    position: absolute;
+    bottom: -17px;
+    right: -108px;
+}
+
+#leftside {
+    width: 384px;
+    height: 538px;
+    background: url("img/leftside_cave2.png") no-repeat;
+    float: left;
+    z-index:1;
+}
+#rightside {
+    width: 398px;
+    height: 519px;
+    background: url("img/rightside_cave2.png") no-repeat;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index:3;
+}
+#banana {
+    width: 37px;
+    height: 37px;
+    background: url("img/banana.svg") no-repeat;
+    position: absolute;
+    left: 206px;
+    bottom: 5px;
+    z-index:1;
+    transition: all ease-out .20s 0s;
+}
+#fuck {
+    display: flex;
+    width: 0px;
+    overflow: hidden;
+    position: absolute;
+    left: 256px;
+    bottom: 100px;
+    z-index:1;
+    color:white;
+    font-size: 28px;
+    font-family: 'Gloria Hallelujah', bold;
+    letter-spacing: 3px;
+    transition: all ease-out .35s 0s;
+}
+#fuck > span { float: left;}
+#fuck span:nth-child(1) { font-size: 28px;}
+#fuck span:nth-child(2) { font-size: 26px;}
+#fuck span:nth-child(3) { font-size: 24px; }
+#fuck span:nth-child(4) { font-size: 22px; }
+#fuck span:nth-child(5) { font-size: 20px; }
+#fuck span:nth-child(6) { font-size: 18px; }
+#fuck span:nth-child(7) { font-size: 16px; }
+#fuck span:nth-child(8) { font-size: 14px; }
+#fuck span:nth-child(9) { font-size: 12px; }
+#fuck span:nth-child(10) { font-size: 10px; }
+#fuck span:nth-child(11) { font-size: 8px; }
+
+#WomenSprite3 {
+    overflow: hidden;
+    width: 214px;
+    height: 87px;
+    position: absolute;
+    left: 790px; /*790*/
+    top: -124px;
+    z-index: 2;
+    background: url("img/sprite_fall.png") no-repeat;
+    background-position: -1562px;
+    will-change: transform;
+}
+#WomenSprite {
+    overflow:hidden;
+    width:279px;
+    height: 148px;
+    position:absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index:2;
+    background-image:url("img/goblin_sprite2.png");
+    will-change: transform;
+    animation: moveGirl2 .35s  steps(7) infinite, moveGirl1 3s linear 1;
+    -moz-animation: moveGirl2 .35s  steps(7) infinite, moveGirl1 3s linear 1;
+    -ms-animation: moveGirl2 .35s  steps(7) infinite, moveGirl1 3s linear 1;
+    -o-animation: moveGirl2 .35s  steps(7) infinite, moveGirl1 3s linear 1;
+}
+
+@-webkit-keyframes moveGirl1 {
+    100% { transform:  translate3d(584px, 0px, 0px); }
+}
+@-moz-keyframes moveGirl1 {
+     100% { transform:  translate3d(584px, 0px, 0px); }
+}
+@-ms-keyframes moveGirl1 {
+    100% { transform:  translate3d(584px, 0px, 0px); }
+}
+@-o-keyframes moveGirl1 {
+    100% { transform:  translate3d(584px, 0px, 0px); }
+}
+@keyframes moveGirl1 {
+    100% { transform:  translate3d(584px, 0px, 0px); }
+}
+
+
+@-webkit-keyframes moveGirl2 {
+    from { background-position: 0px; }
+    to { background-position: -1953px; }
+}
+@-moz-keyframes moveGirl2 {
+    from { background-position: 0px; }
+    to { background-position: -1953px; }
+}
+@-ms-keyframes moveGirl2 {
+    from { background-position: 0px; }
+    to { background-position: -1953px; }
+}
+@-o-keyframes moveGirl2 {
+    from { background-position: 0px; }
+    to { background-position: -1953px; }
+}
+@keyframes moveGirl2 {
+    from { background-position: 0px; }
+    to { background-position: -1953px; }
+}
+
+@-webkit-keyframes moveGirl3 {
+    from { background-position: 0px; }
+    to { background-position: -1794px; }
+}
+@-moz-keyframes moveGirl3 {
+    from { background-position: 0px; }
+    to { background-position: -1794px; }
+}
+@-ms-keyframes moveGirl3 {
+    from { background-position: 0px; }
+    to { background-position: -1794px; }
+}
+@-o-keyframes moveGirl3 {
+    from { background-position: 0px; }
+    to { background-position: -1794px; }
+}
+@keyframes moveGirl3 {
+    from { background-position: 0px; }
+    to { background-position: -1794px; }
+}
+
+@-webkit-keyframes moveGirl4 {
+    0% { transform:  translate3d(584px, 0px, 0px); }
+    100% { transform:  translate3d(800px, 0px, 0px); }
+}
+@-moz-keyframes moveGirl4 {
+    0% { transform:  translate3d(584px, 0px, 0px); }
+    100% { transform:  translate3d(800px, 0px, 0px); }
+}
+@-ms-keyframes moveGirl4 {
+    0% { transform:  translate3d(584px, 0px, 0px); }
+    100% { transform:  translate3d(800px, 0px, 0px); }
+}
+@-o-keyframes moveGirl4 {
+    0% { transform:  translate3d(584px, 0px, 0px); }
+    100% { transform:  translate3d(800px, 0px, 0px); }
+}
+@keyframes moveGirl4 {
+    0% { transform:  translate3d(584px, 0px, 0px); }
+    100% { transform:  translate3d(800px, 0px, 0px); }
+}
+
+@-webkit-keyframes fall {
+    100% { transform:  translate3d(0px, 2712px, 0px); } /*2500*/
+}
+@-moz-keyframes fall {
+    100% { transform:  translate3d(0px, 2712px, 0px); }
+}
+@-ms-keyframes fall {
+    100% { transform:  translate3d(0px, 2712px, 0px); }
+}
+@-o-keyframes fall {
+    100% { transform:  translate3d(0px, 2712px, 0px); }
+}
+@keyframes fall {
+    100% { transform:  translate3d(0px, 2712px, 0px); }
+}
+
+@-webkit-keyframes idle {
+    from { background-position: 0px; }
+    to { background-position: -1255px; }
+}
+@-moz-keyframes idle {
+    from { background-position: 0px; }
+    to { background-position: -1255px; }
+}
+@-ms-keyframes idle {
+    from { background-position: 0px; }
+    to { background-position: -1255px; }
+}
+@-o-keyframes idle {
+    from { background-position: 0px; }
+    to { background-position: -1255px; }
+}
+@keyframes idle {
+    from { background-position: 0px; }
+    to { background-position: -1255px; }
+}
+
+@keyframes rotateGear {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/*MIDDLE*/
+#middle {
+    width: 100%;
+    /*height: 2500px;*/
+    height: 3250px;
+    position: relative;
+    overflow: hidden;
+}
+#middle_left {
+     width: 729px;
+     height: 2500px;
+     background: url("img/undeground_up.png") no-repeat, url("img/undeground_center.png") repeat;
+     float: left;
+ }
+#middle_right {
+    width: 61px;
+    height: 2500px;
+    background: url("img/undeground_right_up.png") no-repeat, url("img/undeground_right_center.png") repeat;
+    float: right;
+}
+
+/*DOWN*/
+
+#down, #down2 {
+    width: 100%;
+    height:710px;
+    position: relative;
+    overflow: hidden;
+    background: url("img/cavern.png") no-repeat;
+    transition: all ease 3s 0s;
+    z-index: 1;
+}
+#down2 {
+    margin-top: -710px;
+    filter: blur(17px) opacity(.8);
+    z-index: 7;
+}
+#rails {
+    width: 100%;
+    height: 6px;
+    background: #4e4e4e;
+    position: absolute;
+    bottom: 70px;
+}
+#factory {
+    width: 460px;
+    height: 255px;
+    background: url("img/factory_machine.svg") no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: -28px; /*/8*/
+    bottom: 74px;
+    z-index: 30;
+}
+#board {
+    width: 340px;
+    height: 78px;
+    background: url("img/board.svg") no-repeat center;
+    position: absolute;
+    top: -89px;
+    transition: all 1s 0s ease;
+}
+.btn {
+    width: 55px;
+    height: 31px;
+    margin-top: 40px;
+    transition: all .15s 0s ease-out;
+    transform: rotate(0deg);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#btn_left {
+    transform-origin: 73% 50%;
+    float: left;
+    background: url("img/btn_left.svg") no-repeat;
+}
+
+#btn_right {
+    transform-origin: 28% 50%;
+    float: right;
+    background: url("img/btn_right.svg") no-repeat;
+}
+
+#mechanism {
+    width: 312px;
+    height: 255px;
+    background: url("img/el.svg") no-repeat, url("img/rope-2.svg") no-repeat, url("img/rope-3.svg") no-repeat;
+    background-position: 0px -83px, 0px 0px, 56px 0px;
+    position: absolute;
+    right: 68px;
+    bottom: 172px;
+}
+#gear_sm1, #gear_sm2 {
+    width:80px;
+    height: 80px;
+    background: url("img/gear_sm.svg") no-repeat;
+    float: left;
+    animation: rotateGear 2s linear infinite;
+    animation-play-state: paused;
+}
+#gear_sm2 { float: right; }
+
+#gear_bg {
+    width:150px;
+    height: 150px;
+    background: url("img/gear_bg.svg") no-repeat;
+    clear: both;
+    margin: 0 auto;
+    animation: rotateGear 4s linear infinite;
+    animation-play-state: paused;
+}
+#wagon_container {
+    display: flex;
+    width: 648px;
+    height: 177px;
+    position: absolute;
+    overflow: hidden;
+}
+.wagon {
+    width: 223px;
+    height: 150px;
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+.wagon_three {
+    width: 100%;
+    height: 129px;
+    background: url("img/wagon-3.svg") no-repeat;
+    background-size: contain;
+    position: relative;
+    z-index: 2;
+}
+#wagon_three { height: 132px; }
+#w_two { width: 210px;}
+#wagon_two { background: url("img/wagon-2.svg") no-repeat; }
+
+.wagon_img {
+    width: 162px;
+    height: 110px;
+    left: 0;
+    right: 0;
+    padding-top: 42px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url("img/empty_skull.png") no-repeat center;
+    background-size: 90px;
+    color: rgba(0, 0, 128, 0.7);
+    font-family: 'Ranchers', cursive;
+    font-size: 28px;
+    font-weight: bolder;
+    position: absolute;
+    z-index: 1;
+    font-size: 28px;
+    text-align: center;
+}
+.wagon_one_wheels, .wagon_two_wheels, .wagon_three_wheels {
+    width: 112px;
+    height: 30px;
+    margin: -26px auto 0 auto;
+    position: relative;
+    z-index: 5;
+}
+.wheels {
+    animation: rotateGear 2s ease infinite;
+    animation-play-state: paused;
+    animation-direction: reverse;
+}
+.wagon_one_wheels > .left_wheel, .wagon_one_wheels > .right_wheel,
+.wagon_two_wheels > .left_wheel, .wagon_two_wheels > .right_wheel,
+.wagon_three_wheels > .left_wheel, .wagon_three_wheels > .right_wheel
+{
+    width: 45px;
+    height: 45px;
+    float: left;
+    background: url("img/wheel_wagon_one.svg") no-repeat;
+}
+.wagon_two_wheels > .left_wheel, .wagon_two_wheels > .right_wheel {
+    background: url("img/wheel_wagon_two.svg") no-repeat;
+}
+.wagon_three_wheels > .left_wheel, .wagon_three_wheels > .right_wheel {
+    background: url("img/wheel_wagon_three.svg") no-repeat;
+}
+
+.wagon_one_wheels > .right_wheel, .wagon_two_wheels > .right_wheel,
+.wagon_three_wheels > .right_wheel { float: right; }
+
+#active_troll {
+    overflow: hidden;
+    width: 250px;
+    height: 148px;
+    position: absolute;
+    left: 762px;
+    bottom: 383px;
+    z-index: 22;
+    background: url("img/sprite_fall.png") no-repeat;
+    will-change: transform;
+    animation: moveGirl3 .55s steps(7) infinite;
+    animation-direction: reverse;
+}
+/*--------------*/
+
+#punk_wrapper {
+    width: 669px;
+    height: 177px;
+    position: absolute;
+    bottom: 47px;
+    overflow: hidden;
+}
+.img {transition: all ease 1s 0s;}
+
+input[type='file'] {display: none;}
+label[for=pic] {
+    width: 50px;
+    height: 50px;
+    background: url("img/icons8-add-image-50.png") no-repeat;
+    position: absolute;
+    right: 26px;
+    cursor:pointer;
+    z-index: 9;
+}
+.arrow_box {
+    width: 212px;
+    font-family: 'Gloria Hallelujah', bold;
+    font-size: 14px;
+    position: absolute;
+    background: rgba(236, 208, 102, 0.57);
+    right: 85px;
+    top: 11px;
+    text-align: center;
+}
+.arrow_box:after {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-left-color: rgba(236, 208, 102, 0.57);
+    border-width: 12px;
+    margin-top: -12px;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+#curtain {
+    display: flex;
+    width: 72%;
+    height: 100%;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position:absolute;
+    left: -73%;
+    z-index:99;
+    background: rgba(26, 27, 26, 0.82);
+    object-fit: contain;
+    transition:all 0.55s ease;
+}
+
+#curtain a {
+    bottom: 0px;
+    margin: 0 auto;
+}
+#curtain img { width: 100%;}
+
+#btn_close {
+    background: url("img/btn-close.svg");
+    background-size: contain;
+    margin: 8px auto;
+}
+
+#btn_close, .wrapper_btn_close {
+    width: 40px;
+    height: 40px;
+}
+.wrapper_btn_close{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top:0;
+    right:0;
+    margin: 8px 8px 0px 0px;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border-radius: 50%;
+ }
+#loader {
+    width: 100%;
+    height: 3778px;
+    position: absolute;
+    z-index: 100;
+    background: #c9e7f7;
+}
+/*https://elrumordelaluz.github.io/csshake/*/
+/*CSS Preloader*/
+#cssload-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 15;
+    overflow: hidden;
+}
+
+.cssload-loader {
+    width: 146px;
+    height: 146px;
+    border: 1px rgb(0,0,0) solid;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -73px 0 0 -73px;
+    border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+.cssload-loader .cssload-loading {
+    font-size: 10px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    line-height: 14px;
+    font-family: 'Century Gothic', sans-serif;
+    font-style: italic;
+    left: 0;
+    top: 50%;
+    margin-top: 19px;
+    color: rgb(0,0,0);
+    font-weight: bold;
+    text-transform: uppercase;
+    -o-text-transform: uppercase;
+    -ms-text-transform: uppercase;
+    -webkit-text-transform: uppercase;
+    -moz-text-transform: uppercase;
+}
+
+.cssload-loader-circle-1 {
+    width: 135px;
+    height: 135px;
+    left: 5px;
+    top: 5px;
+    border: 1px rgb(0,0,0) solid;
+    position: absolute;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    animation: spin 3.45s linear infinite;
+    -o-animation: spin 3.45s linear infinite;
+    -ms-animation: spin 3.45s linear infinite;
+    -webkit-animation: spin 3.45s linear infinite;
+    -moz-animation: spin 3.45s linear infinite;
+}
+
+.cssload-loader-circle-2 {
+    width: 123px;
+    height: 123px;
+    left: 5px;
+    top: 5px;
+    border: 1px transparent solid;
+    position: absolute;
+    border-right-color: rgb(232,21,18);
+    border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    animation: spin 5.75s linear infinite;
+    -o-animation: spin 5.75s linear infinite;
+    -ms-animation: spin 5.75s linear infinite;
+    -webkit-animation: spin 5.75s linear infinite;
+    -moz-animation: spin 5.75s linear infinite;
+}
+
+.cssload-loader .cssload-line {
+    width: 10px;
+    height: 2px;
+    background: rgb(0,0,0);
+    position: absolute;
+}
+
+.cssload-loader .cssload-line:nth-child(1) {
+    left: 16px;
+    top: 50%;
+    margin-top: -1px;
+}
+
+.cssload-loader .cssload-line:nth-child(2) {
+    transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    left: 32px;
+    top: 32px;
+}
+
+.cssload-loader .cssload-line:nth-child(3) {
+    top: 16px;
+    left: 50%;
+    width: 2px;
+    height: 10px;
+}
+
+.cssload-loader .cssload-line:nth-child(4) {
+    transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    right: 32px;
+    top: 32px;
+}
+
+.cssload-loader .cssload-line:nth-child(5) {
+    right: 16px;
+    top: 50%;
+    margin-top: -1px;
+}
+
+.cssload-loader .cssload-line:nth-child(6) {
+    transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    right: 32px;
+    bottom: 32px;
+    background: rgb(232,21,18);
+}
+
+.cssload-loader .cssload-subline {
+    position: absolute;
+    width: 3px;
+    height: 2px;
+    background: rgb(0,0,0);
+}
+
+.cssload-loader .cssload-subline:nth-child(7) {
+    transform: rotate(22.5deg);
+    -o-transform: rotate(22.5deg);
+    -ms-transform: rotate(22.5deg);
+    -webkit-transform: rotate(22.5deg);
+    -moz-transform: rotate(22.5deg);
+    left: 20px;
+    top: 49px;
+}
+
+.cssload-loader .cssload-subline:nth-child(8) {
+    transform: rotate(67.5deg);
+    -o-transform: rotate(67.5deg);
+    -ms-transform: rotate(67.5deg);
+    -webkit-transform: rotate(67.5deg);
+    -moz-transform: rotate(67.5deg);
+    left: 49px;
+    top: 20px;
+}
+
+.cssload-loader .cssload-subline:nth-child(9) {
+    transform: rotate(112.5deg);
+    -o-transform: rotate(112.5deg);
+    -ms-transform: rotate(112.5deg);
+    -webkit-transform: rotate(112.5deg);
+    -moz-transform: rotate(112.5deg);
+    right: 49px;
+    top: 20px;
+}
+
+.cssload-loader .cssload-subline:nth-child(10) {
+    transform: rotate(157.5deg);
+    -o-transform: rotate(157.5deg);
+    -ms-transform: rotate(157.5deg);
+    -webkit-transform: rotate(157.5deg);
+    -moz-transform: rotate(157.5deg);
+    right: 20px;
+    top: 49px;
+}
+
+.cssload-loader .cssload-subline:nth-child(11) {
+    transform: rotate(22.5deg);
+    -o-transform: rotate(22.5deg);
+    -ms-transform: rotate(22.5deg);
+    -webkit-transform: rotate(22.5deg);
+    -moz-transform: rotate(22.5deg);
+    right: 19px;
+    bottom: 48px;
+    background: rgb(232,21,18);
+}
+
+.cssload-loader .cssload-needle {
+    width: 14px;
+    height: 14px;
+    border: 1px rgb(0,0,0) solid;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -8px 0 0 -8px;
+    z-index: 1;
+    border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    animation: pegIt 3.45s infinite ease-in-out;
+    -o-animation: pegIt 3.45s infinite ease-in-out;
+    -ms-animation: pegIt 3.45s infinite ease-in-out;
+    -webkit-animation: pegIt 3.45s infinite ease-in-out;
+    -moz-animation: pegIt 3.45s infinite ease-in-out;
+}
+
+.cssload-loader .cssload-needle:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3.5px 49px 3.5px 0;
+    border-color: transparent rgb(232,21,18) transparent transparent;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    margin: -3.5px 0 0 0;
+    border-radius: 0 50% 50% 0;
+    -o-border-radius: 0 50% 50% 0;
+    -ms-border-radius: 0 50% 50% 0;
+    -webkit-border-radius: 0 50% 50% 0;
+    -moz-border-radius: 0 50% 50% 0;
+}
+
+
+
+
+
+@keyframes pegIt {
+    0% {
+        transform: rotate(0deg);
+    }
+    16% {
+        transform: rotate(75deg);
+    }
+    25% {
+        transform: rotate(55deg);
+    }
+    30% {
+        transform: rotate(90deg);
+    }
+    36% {
+        transform: rotate(170deg);
+    }
+    42% {
+        transform: rotate(150deg);
+    }
+    50% {
+        transform: rotate(227deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@-o-keyframes pegIt {
+    0% {
+        -o-transform: rotate(0deg);
+    }
+    16% {
+        -o-transform: rotate(75deg);
+    }
+    25% {
+        -o-transform: rotate(55deg);
+    }
+    30% {
+        -o-transform: rotate(90deg);
+    }
+    36% {
+        -o-transform: rotate(170deg);
+    }
+    42% {
+        transform: rotate(150deg);
+    }
+    50% {
+        -o-transform: rotate(227deg);
+    }
+    100% {
+        -o-transform: rotate(0deg);
+    }
+}
+
+@-ms-keyframes pegIt {
+    0% {
+        -ms-transform: rotate(0deg);
+    }
+    16% {
+        -ms-transform: rotate(75deg);
+    }
+    25% {
+        -ms-transform: rotate(55deg);
+    }
+    30% {
+        -ms-transform: rotate(90deg);
+    }
+    36% {
+        -ms-transform: rotate(170deg);
+    }
+    42% {
+        transform: rotate(150deg);
+    }
+    50% {
+        -ms-transform: rotate(227deg);
+    }
+    100% {
+        -ms-transform: rotate(0deg);
+    }
+}
+
+@-webkit-keyframes pegIt {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    16% {
+        -webkit-transform: rotate(75deg);
+    }
+    25% {
+        -webkit-transform: rotate(55deg);
+    }
+    30% {
+        -webkit-transform: rotate(90deg);
+    }
+    36% {
+        -webkit-transform: rotate(170deg);
+    }
+    42% {
+        transform: rotate(150deg);
+    }
+    50% {
+        -webkit-transform: rotate(227deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@-moz-keyframes pegIt {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    16% {
+        -moz-transform: rotate(75deg);
+    }
+    25% {
+        -moz-transform: rotate(55deg);
+    }
+    30% {
+        -moz-transform: rotate(90deg);
+    }
+    36% {
+        -moz-transform: rotate(170deg);
+    }
+    42% {
+        transform: rotate(150deg);
+    }
+    50% {
+        -moz-transform: rotate(227deg);
+    }
+    100% {
+        -moz-transform: rotate(0deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes spin {
+    0% {
+        -o-transform: rotate(0deg);
+    }
+    100% {
+        -o-transform: rotate(360deg);
+    }
+}
+
+@-ms-keyframes spin {
+    0% {
+        -ms-transform: rotate(0deg);
+    }
+    100% {
+        -ms-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
