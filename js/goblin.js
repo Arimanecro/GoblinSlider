@@ -88,11 +88,6 @@ window.addEventListener("load", function() {
         "animationend",
         function() {
           goblinFall.setAttribute("style", "animation: fall 5s ease-in 1");
-          //   let x = window
-          //     .getComputedStyle(goblinFall)
-          //     .getPropertyValue("transform")
-          //     .split(",")[5];
-          //   window.scrollTo(x.slice(0, -1), x.slice(0, -1) + 200);
         },
         false,
         false,
