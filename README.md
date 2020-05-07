@@ -6,7 +6,7 @@ My first JS app :)
 
    ***:heavy_check_mark: Vanilla JavaScript***
 
-**:link:  [Link](https://expressjs-roboshop.herokuapp.com/)**
+**:link:  [Link](https://arimanecro.github.io/goblin//)**
 
 ***Screenshots:***
 
